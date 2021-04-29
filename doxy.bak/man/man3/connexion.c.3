@@ -1,0 +1,53 @@
+.TH "connexion.c" 3 "Thu Apr 29 2021" "GESTION PARKING" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+connexion.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'structure\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBconnexion\fP ()"
+.br
+.RI "Fonction connexion permettant de se connecter a la base de données\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "MYSQL \fBmysql\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int connexion ()"
+
+.PP
+Fonction connexion permettant de se connecter a la base de données\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "MYSQL mysql"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GESTION PARKING from the source code\&.

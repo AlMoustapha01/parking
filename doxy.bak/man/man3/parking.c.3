@@ -1,0 +1,89 @@
+.TH "parking.c" 3 "Thu Apr 29 2021" "GESTION PARKING" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+parking.c \- Projet GESTION PARKING\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'structure\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBplace_disponible\fP ()"
+.br
+.RI "Fonction place_disponible permettant d'afficher le nombre de place disponible\&. "
+.ti -1c
+.RI "void \fBplace_disponible_pour_une_categorie\fP (char *type)"
+.br
+.RI "Fonction place_disponible permettant d'afficher le nombre de place disponible pour une type de vehicule\&. "
+.ti -1c
+.RI "void \fBajouter_parking\fP (char *type)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "MYSQL \fBmysql\fP"
+.br
+.ti -1c
+.RI "char \fBretour\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Projet GESTION PARKING\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+AHIBA ANOKOUA STEPHANIE 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void ajouter_parking (char * type)"
+
+.SS "void place_disponible ()"
+
+.PP
+Fonction place_disponible permettant d'afficher le nombre de place disponible\&. 
+.SS "void place_disponible_pour_une_categorie (char * type)"
+
+.PP
+Fonction place_disponible permettant d'afficher le nombre de place disponible pour une type de vehicule\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "MYSQL mysql"
+
+.SS "char retour"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GESTION PARKING from the source code\&.

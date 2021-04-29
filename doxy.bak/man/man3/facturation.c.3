@@ -1,0 +1,71 @@
+.TH "facturation.c" 3 "Thu Apr 29 2021" "GESTION PARKING" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+facturation.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'structure\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "long \fBduree_heure\fP (char *matricule)"
+.br
+.RI "Fonction duree_heure qui renvoie le nombre d'heure de stationnement d'un engin grace a son matricule\&. "
+.ti -1c
+.RI "long \fBcalcul_montant\fP (char *matricule, char *type)"
+.br
+.RI "Fonction calcul_montant permettant de calculer le prix du stationnement d'un engin\&. "
+.ti -1c
+.RI "int \fBrecuperer_id\fP (char *matricule)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "MYSQL \fBmysql\fP"
+.br
+.ti -1c
+.RI "char \fBretour\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "long calcul_montant (char * matricule, char * type)"
+
+.PP
+Fonction calcul_montant permettant de calculer le prix du stationnement d'un engin\&. 
+.SS "long duree_heure (char * matricule)"
+
+.PP
+Fonction duree_heure qui renvoie le nombre d'heure de stationnement d'un engin grace a son matricule\&. 
+.SS "int recuperer_id (char * matricule)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "MYSQL mysql"
+
+.SS "char retour"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GESTION PARKING from the source code\&.

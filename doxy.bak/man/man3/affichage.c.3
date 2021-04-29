@@ -1,0 +1,90 @@
+.TH "affichage.c" 3 "Thu Apr 29 2021" "GESTION PARKING" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+affichage.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'structure\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBretourner\fP ()"
+.br
+.RI "Fonction retourner permettant de retourner au menu precedent\&. "
+.ti -1c
+.RI "void \fBentrer_parking\fP ()"
+.br
+.RI "Fonction entrer_parking permettant de gerer les entrées\&. "
+.ti -1c
+.RI "void \fBsortie_parking\fP ()"
+.br
+.RI "Fonction sortie_parking permettant de gerer les sorties du parking\&. "
+.ti -1c
+.RI "void \fBgestion_parking\fP ()"
+.br
+.RI "Fonction sortie_parking permettant d'afficher les services d'affichage des places disponibles\&. "
+.ti -1c
+.RI "void \fBmenu\fP ()"
+.br
+.RI "Fonction menu qui affiche les services disponibles\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "MYSQL \fBmysql\fP"
+.br
+.ti -1c
+.RI "char \fBretour\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void entrer_parking ()"
+
+.PP
+Fonction entrer_parking permettant de gerer les entrées\&. 
+.SS "void gestion_parking ()"
+
+.PP
+Fonction sortie_parking permettant d'afficher les services d'affichage des places disponibles\&. 
+.SS "void menu ()"
+
+.PP
+Fonction menu qui affiche les services disponibles\&. 
+.SS "void retourner ()"
+
+.PP
+Fonction retourner permettant de retourner au menu precedent\&. 
+.SS "void sortie_parking ()"
+
+.PP
+Fonction sortie_parking permettant de gerer les sorties du parking\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "MYSQL mysql"
+
+.SS "char retour"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GESTION PARKING from the source code\&.

@@ -1,0 +1,93 @@
+.TH "stationnement.c" 3 "Thu Apr 29 2021" "GESTION PARKING" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+stationnement.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'structure\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBverification\fP (char *type)"
+.br
+.RI "Fonction connexion permettant de verifier s'il existe une place libre pour un type de vehicule s'il existe il retourne l'id de place disponible sinon il retourne 0\&. "
+.ti -1c
+.RI "int \fBclient_existe\fP (char *matricule)"
+.br
+.ti -1c
+.RI "int \fBenregister_client\fP (char *type, char *mat, char *nom, char *tel)"
+.br
+.RI "Fonction enregistrer_vehicule permettant d'enregistrer un client dans la base de données\&. "
+.ti -1c
+.RI "void \fBmise_a_jour_place\fP (int id, int statut)"
+.br
+.RI "Fonction mise_a_jour_place qui permet de mettre a jour le statut d'une place de parking (1) pour occuper ou (0) pour liberer\&. "
+.ti -1c
+.RI "void \fBmise_a_jour_heure_sortie\fP (char *matricule)"
+.br
+.RI "Fonction mise_a_jour_sortie permettant d'inserer la date et l'heure de sortie d'un vehicule\&. "
+.ti -1c
+.RI "void \fBsupprimer_client\fP (char *matricule)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "MYSQL \fBmysql\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int client_existe (char * matricule)"
+
+.SS "int enregister_client (char * type, char * mat, char * nom, char * tel)"
+
+.PP
+Fonction enregistrer_vehicule permettant d'enregistrer un client dans la base de données\&. On verifie s'il existe encore des places avant d'enregistrer le client
+.PP
+s'il n'y a plus de place
+.PP
+s'il ya une place disponible
+.PP
+preparation de la requete pour inserer les données du client
+.SS "void mise_a_jour_heure_sortie (char * matricule)"
+
+.PP
+Fonction mise_a_jour_sortie permettant d'inserer la date et l'heure de sortie d'un vehicule\&. 
+.SS "void mise_a_jour_place (int id, int statut)"
+
+.PP
+Fonction mise_a_jour_place qui permet de mettre a jour le statut d'une place de parking (1) pour occuper ou (0) pour liberer\&. 
+.SS "void supprimer_client (char * matricule)"
+
+.SS "int verification (char * type)"
+
+.PP
+Fonction connexion permettant de verifier s'il existe une place libre pour un type de vehicule s'il existe il retourne l'id de place disponible sinon il retourne 0\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "MYSQL mysql"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GESTION PARKING from the source code\&.

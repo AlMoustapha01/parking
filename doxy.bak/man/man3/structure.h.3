@@ -1,0 +1,158 @@
+.TH "structure.h" 3 "Thu Apr 29 2021" "GESTION PARKING" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+structure.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBretourner\fP ()"
+.br
+.RI "Fonction retourner permettant de retourner au menu precedent\&. "
+.ti -1c
+.RI "int \fBconnexion\fP ()"
+.br
+.RI "Fonction connexion permettant de se connecter a la base de données\&. "
+.ti -1c
+.RI "int \fBverification\fP (char *type)"
+.br
+.RI "Fonction connexion permettant de verifier s'il existe une place libre pour un type de vehicule s'il existe il retourne l'id de place disponible sinon il retourne 0\&. "
+.ti -1c
+.RI "int \fBenregister_client\fP (char *type, char *mat, char *nom, char *tel)"
+.br
+.RI "Fonction enregistrer_vehicule permettant d'enregistrer un client dans la base de données\&. "
+.ti -1c
+.RI "long \fBduree_heure\fP (char *matricule)"
+.br
+.RI "Fonction duree_heure qui renvoie le nombre d'heure de stationnement d'un engin grace a son matricule\&. "
+.ti -1c
+.RI "long \fBcalcul_montant\fP (char *matricule, char *type)"
+.br
+.RI "Fonction calcul_montant permettant de calculer le prix du stationnement d'un engin\&. "
+.ti -1c
+.RI "int \fBrecuperer_id\fP (char *matricule)"
+.br
+.ti -1c
+.RI "void \fBmise_a_jour_place\fP (int id, int statut)"
+.br
+.RI "Fonction mise_a_jour_place qui permet de mettre a jour le statut d'une place de parking (1) pour occuper ou (0) pour liberer\&. "
+.ti -1c
+.RI "void \fBentrer_parking\fP ()"
+.br
+.RI "Fonction entrer_parking permettant de gerer les entrées\&. "
+.ti -1c
+.RI "void \fBsortie_parking\fP ()"
+.br
+.RI "Fonction sortie_parking permettant de gerer les sorties du parking\&. "
+.ti -1c
+.RI "void \fBplace_disponible\fP ()"
+.br
+.RI "Fonction place_disponible permettant d'afficher le nombre de place disponible\&. "
+.ti -1c
+.RI "void \fBplace_disponible_pour_une_categorie\fP (char *type)"
+.br
+.RI "Fonction place_disponible permettant d'afficher le nombre de place disponible pour une type de vehicule\&. "
+.ti -1c
+.RI "void \fBajouter_parking\fP ()"
+.br
+.ti -1c
+.RI "void \fBsupprimer_client\fP (char *matricule)"
+.br
+.ti -1c
+.RI "int \fBclient_existe\fP (char *matricule)"
+.br
+.ti -1c
+.RI "void \fBmise_a_jour_heure_sortie\fP (char *matricule)"
+.br
+.RI "Fonction mise_a_jour_sortie permettant d'inserer la date et l'heure de sortie d'un vehicule\&. "
+.ti -1c
+.RI "void \fBmenu\fP ()"
+.br
+.RI "Fonction menu qui affiche les services disponibles\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "MYSQL \fBmysql\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void ajouter_parking ()"
+
+.SS "long calcul_montant (char * matricule, char * type)"
+
+.PP
+Fonction calcul_montant permettant de calculer le prix du stationnement d'un engin\&. 
+.SS "int client_existe (char * matricule)"
+
+.SS "int connexion ()"
+
+.PP
+Fonction connexion permettant de se connecter a la base de données\&. 
+.SS "long duree_heure (char * matricule)"
+
+.PP
+Fonction duree_heure qui renvoie le nombre d'heure de stationnement d'un engin grace a son matricule\&. 
+.SS "int enregister_client (char * type, char * mat, char * nom, char * tel)"
+
+.PP
+Fonction enregistrer_vehicule permettant d'enregistrer un client dans la base de données\&. On verifie s'il existe encore des places avant d'enregistrer le client
+.PP
+s'il n'y a plus de place
+.PP
+s'il ya une place disponible
+.PP
+preparation de la requete pour inserer les données du client
+.SS "void entrer_parking ()"
+
+.PP
+Fonction entrer_parking permettant de gerer les entrées\&. 
+.SS "void menu ()"
+
+.PP
+Fonction menu qui affiche les services disponibles\&. 
+.SS "void mise_a_jour_heure_sortie (char * matricule)"
+
+.PP
+Fonction mise_a_jour_sortie permettant d'inserer la date et l'heure de sortie d'un vehicule\&. 
+.SS "void mise_a_jour_place (int id, int statut)"
+
+.PP
+Fonction mise_a_jour_place qui permet de mettre a jour le statut d'une place de parking (1) pour occuper ou (0) pour liberer\&. 
+.SS "void place_disponible ()"
+
+.PP
+Fonction place_disponible permettant d'afficher le nombre de place disponible\&. 
+.SS "void place_disponible_pour_une_categorie (char * type)"
+
+.PP
+Fonction place_disponible permettant d'afficher le nombre de place disponible pour une type de vehicule\&. 
+.SS "int recuperer_id (char * matricule)"
+
+.SS "void retourner ()"
+
+.PP
+Fonction retourner permettant de retourner au menu precedent\&. 
+.SS "void sortie_parking ()"
+
+.PP
+Fonction sortie_parking permettant de gerer les sorties du parking\&. 
+.SS "void supprimer_client (char * matricule)"
+
+.SS "int verification (char * type)"
+
+.PP
+Fonction connexion permettant de verifier s'il existe une place libre pour un type de vehicule s'il existe il retourne l'id de place disponible sinon il retourne 0\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "MYSQL mysql"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for GESTION PARKING from the source code\&.
